@@ -19,6 +19,6 @@ The following task list displays a timeline of the items that we plan to impleme
 | 3/20- 5/20      | Sprite Packer | Not Implemented |
 | 5/20 - 7/20     | Map Editor | Not Implemented |
 | 7/20 - 8/20     | Sprite Bone Animator  | Not Implemented |
-| 9/20 - 10/20    | Particle System Editor  | Not Scheduled |
-| 10/20 - 11/20   | Cutscene Editor  | Not Scheduled |
+| 9/20 - 10/20*    | Particle System Editor  | Not Scheduled |
+| 10/20 - 11/20*   | Cutscene Editor  | Not Scheduled |
 
