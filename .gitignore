@@ -1,0 +1,9 @@
+.vs
+.qmake.stash
+*.ncb
+*.suo
+/tmp
+/bin
+/x64
+*.user
+*.filters
