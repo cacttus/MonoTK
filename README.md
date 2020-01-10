@@ -13,12 +13,12 @@ This is a list of the following items this test project needs to demonstrate in 
 
 The following task list displays a timeline of the items that we plan to implement in the toolkit.
 
-|            Task |     Timeline    |
-| :-------------: | :-------------: |
-| 1/20 - 3/20     | Data Model  |
-| 3/20- 5/20      | Sprite Packer |
-| 5/20 - 7/20     | Map Editor |
-| 7/20 - 8/20     | Sprite Bone Animator  |
-| 9/20 - 10/20    | Particle System Editor  |
-| 10/20 - 11/20   | Cutscene Editor  |
+|        Timeline |     Task     |   Status          |
+| :-------------: | :-------------: | :---------------: |
+| 1/20 - 3/20     | Data Model  |  Not Implemented |
+| 3/20- 5/20      | Sprite Packer | Not Implemented |
+| 5/20 - 7/20     | Map Editor | Not Implemented |
+| 7/20 - 8/20     | Sprite Bone Animator  | Not Implemented |
+| 9/20 - 10/20    | Particle System Editor  | Not Scheduled |
+| 10/20 - 11/20   | Cutscene Editor  | Not Scheduled |
 
