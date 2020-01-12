@@ -1,7 +1,9 @@
-#include "./MainWindow.h"
 #include <QApplication>
 #include <QSurfaceFormat>
 #include <QOpenGLContext>
+
+#include "./MainWindow.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -25,12 +27,4 @@ int main(int argc, char *argv[])
   w.show();
 
   return a.exec();
-
-    //QApplication a(argc, argv);
-
-    //MonoTK::MainWindow w;
-    //w.show();
-
-
-    //return a.exec();
 }

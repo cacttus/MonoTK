@@ -1,0 +1,13 @@
+TODO
+
+More Prototype tests
+P1
+Create a menu bar with File -> Exit
+
+P2
+create Project submenu with New, Save, Load
+Menu spacer
+
+
+
+

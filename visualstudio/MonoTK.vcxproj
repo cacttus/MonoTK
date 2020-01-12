@@ -92,9 +92,10 @@
   <ItemGroup>
     <ClCompile Include="../src/main.cpp" />
     <ClCompile Include="..\src\MainWindow.cpp" />
+    <ClCompile Include="..\src\OpenGLWidget.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="..\src\MainWindow.h" />
+    <QtMoc Include="..\src\OpenGLWidget.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="../src/MonoTK.ui" />
@@ -103,7 +104,11 @@
     <QtRcc Include="../src/MonoTK.qrc" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="..\src\MainWindow.h" />
     <ClInclude Include="..\src\MonoTKHeader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="devlog.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
