@@ -14,6 +14,7 @@
 #include <QMatrix>
 
 #include <QObject>
+#include <QException>
 
 typedef QVector3D vec3;
 typedef QMatrix4x4 mat4;
@@ -21,13 +22,32 @@ typedef QMatrix4x4 mat4;
 class QuadDrawer;
 
 QT_BEGIN_NAMESPACE
-
+//OpeNGL
 class QOpenGLTexture;
 class QOpenGLShaderProgram;
 class QOpenGLBuffer;
 class QOpenGLVertexArrayObject;
 
+//Widgets
+class QOpenGLWidget;
+class QMdiArea;
+
 QT_END_NAMESPACE
+
+
+class Exception : public QException{
+    QString _what;
+public:
+    Exception(QString s){
+        _what = s;
+    }
+    void raise() const { throw *this; }
+    Exception *clone() const { return new Exception(*this); }
+    virtual const char*
+    what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_USE_NOEXCEPT override {
+        return _what.toStdString().c_str();
+    }
+};
 
 
 #endif // MonoTKHeader

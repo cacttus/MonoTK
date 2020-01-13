@@ -1,8 +1,8 @@
-#-------------------------------------------------
 #
-# Project created by QtCreator 2019-05-07T21:00:53
+# Main QT Build file
+# MonoTK, 2020
+# MetalMario971
 #
-#-------------------------------------------------
 
 QT += core gui
 QT += opengl
@@ -10,8 +10,17 @@ QT += gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = MonoTK
+#https://doc.qt.io/qt-5/qmake-variable-reference.html
 TEMPLATE = app
+TARGET = MonoTK
+DESTDIR = $$PWD/bin
+CONFIG += debug
+LIBS += -L"$$PWD"
+DEPENDPATH += $$PWD/src
+MOC_DIR += $$PWD/tmp/moc
+OBJECTS_DIR += $$PWD/tmp/objects
+UI_DIR += $$PWD/tmp/ui
+RCC_DIR += $$PWD/tmp/rcc
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
@@ -26,17 +35,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
-SOURCES += \
-        ./src/main.cpp \
-		./src/MonoTK.cpp
-
-HEADERS += \
-        ./src/MonoTK.h
-
-FORMS += \
-        ./src/MonoTK.ui
-
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+HEADERS += $$PWD/src/MonoTKHeader.h \
+    $$PWD/src/OpenGLWidget.h \
+    $$PWD/src/MainWindow.h
+SOURCES += $$PWD/src/main.cpp \
+    $$PWD/src/OpenGLWidget.cpp \
+    $$PWD/src/MainWindow.cpp
+FORMS += $$PWD/src/mainwindow.ui
+RESOURCES += $$PWD/src/MonoTK.qrc \
+    $$PWD/qdarkstyle/style.qrc

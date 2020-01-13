@@ -12,9 +12,8 @@
 #include "./MonoTKHeader.h"
 #include <QMainWindow>
 
-QT_BEGIN_NAMESPACE
-class QMdiArea;
-QT_END_NAMESPACE
+
+#include "ui_mainwindow.h"
 
 namespace MonoTK {
 /**
@@ -26,9 +25,10 @@ class MainWindow : public QMainWindow {
   Q_OBJECT
 
 private:
+  Ui::MainWindow ui;
+
   QMenuBar* menuBar;
   QToolBar* mainToolBar;
-  //QWidget* centralWidget;
   QStatusBar* statusBar;
   QOpenGLWidget* openGLWidget;
 
@@ -37,6 +37,12 @@ private:
 public:
   MainWindow(QWidget* parent = Q_NULLPTR);
   virtual ~MainWindow();
+
+  private slots:
+      //https://doc.qt.io/qt-5/qmetaobject.html#connectSlotsByName
+      //void on_<object name>_<signal name>(<signal parameters>);
+      void on_comboBox_currentIndexChanged(int index);
+      void on_actionExit_triggered();
 };
 }//ns MonoTK
 

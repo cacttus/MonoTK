@@ -92,8 +92,12 @@ void OpenGLWidget::initializeGL() {
     m_texture = 0;
   }
 
-  QImage img(QDir::currentPath() + "/images/qtlogo.png");
-  Q_ASSERT(!img.isNull());
+  QString path = QDir::currentPath() + "/images/qtlogo.png";
+  QImage img(path);
+  if(img.isNull()) {
+      throw new Exception("Image " + path + " was null.");
+  }
+
   m_texture = new QOpenGLTexture(img.scaled(32, 36).mirrored());
 
   if (m_program) {

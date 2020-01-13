@@ -98,10 +98,8 @@
     <QtMoc Include="..\src\OpenGLWidget.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="../src/MonoTK.ui" />
-  </ItemGroup>
-  <ItemGroup>
     <QtRcc Include="../src/MonoTK.qrc" />
+    <QtRcc Include="..\qdarkstyle\style.qrc" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="..\src\MainWindow.h" />
@@ -109,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="devlog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\src\mainwindow.ui" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
