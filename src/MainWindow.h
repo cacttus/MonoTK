@@ -43,6 +43,7 @@ public:
       //void on_<object name>_<signal name>(<signal parameters>);
       void on_comboBox_currentIndexChanged(int index);
       void on_actionExit_triggered();
+      void on_pushButton_clicked();
 };
 }//ns MonoTK
 

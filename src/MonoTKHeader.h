@@ -31,9 +31,16 @@ class QOpenGLVertexArrayObject;
 //Widgets
 class QOpenGLWidget;
 class QMdiArea;
-
 QT_END_NAMESPACE
 
+class MonoInterface;
+
+class Globals {
+  public:
+      static int argc;
+      static char ** argv;
+      static MonoInterface* _pMonoInterface;
+};
 
 class Exception : public QException{
     QString _what;

@@ -8,12 +8,20 @@
 #include <QDir>
 
 #include "./MainWindow.h"
+#include "./MonoInterface.h"
+
+int Globals::argc=0;
+char ** Globals::argv=0;
+MonoInterface * Globals::_pMonoInterface=nullptr;
 
 void setStyle(QApplication* a);
 void setOpenGLFormat();
 void setWorkingDirectory();
 int main(int argc, char *argv[])
 {
+  Globals::argc = argc;
+  Globals::argv = argv;
+  Globals::_pMonoInterface = new MonoInterface();
   QApplication a(argc, argv);
 
   setWorkingDirectory();
@@ -25,7 +33,11 @@ int main(int argc, char *argv[])
   MonoTK::MainWindow w;
   w.show();
 
-  return a.exec();
+  int ret = a.exec();
+
+  delete Globals::_pMonoInterface;
+
+  return ret;
 }
 void setWorkingDirectory(){
     qDebug() << QDir::currentPath();

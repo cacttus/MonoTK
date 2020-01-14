@@ -1,5 +1,6 @@
 #include "./MainWindow.h"
 #include "./OpenGLWidget.h"
+#include "./MonoInterface.h"
 #include <QtCore/QVariant>
 #include <QOpenGLWidget>
 #include <QApplication>
@@ -114,8 +115,15 @@ void MainWindow::on_actionExit_triggered()
   QCoreApplication::quit();
 }
 
+void MainWindow::on_pushButton_clicked()
+{
 
+  Globals::_pMonoInterface->runCSharpApp();
+
+}
 
 }//ns MonoTK
+
+
 
 
